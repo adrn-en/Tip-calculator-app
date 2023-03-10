@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- displays site properly based on user's device -->
+
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   <link rel="stylesheet" href="./src/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+   <script src="./src/script.js" defer></script>
+
+   <title>Frontend Mentor | Tip calculator app</title>
+
+   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+   <style>
+      .attribution {
+         font-size: 11px;
+         text-align: center;
+      }
+
+      .attribution a {
+         color: hsl(228, 45%, 44%);
+         text-decoration: none;
+      }
+
+      .attribution a:hover {
+         text-decoration: underline;
+      }
+   </style>
+</head>
+
+<body>
+   <main class="container">
+      <img src="/images/logo.svg" alt="Splitter logo" id="logo">
+      <div class="inner-container">
+         <section class="left-section">
+            <div class="bill-wrapper wrap">
+               <p class="p-text">Bill</p>
+               <div class="input-wrapper">
+                  <input type="text" id="bill-input" placeholder="0" class="inp inp-text" onkeypress="numOnly(event)">
+                  <img src="/images/icon-dollar.svg" alt="" class="icon">
+               </div>
+            </div>
+            <div class="tip-wrapper wrap">
+               <p class="p-text">Select Tip %</p>
+               <div class="button-wrapper">
+                  <button class="btn" value="5">5%</button>
+                  <button class="btn" value="10">10%</button>
+                  <button class="btn" value="15">15%</button>
+                  <button class="btn" value="25">25%</button>
+                  <button class="btn" value="50">50%</button>
+                  <input type="text" placeholder="Custom" class="custom inp-text" id="custom-input"
+                     onkeypress="numOnly(event)">
+               </div>
+            </div>
+            <div class="people-wrapper wrap">
+               <p class="p-text flex">Number of People<span id="error-popup">Can't be zero</span></span>
+               <div class="input-wrapper">
+                  <input type="text" class="inp inp-text" id="people-count" placeholder="0">
+                  <img src="/images/icon-person.svg" alt="" class="icon">
+               </div>
+            </div>
+         </section>
+         <section class="right-section">
+            <div class="r-inner-wrapper">
+               <div class="r-wrapper">
+                  <div class="text-wrapper">
+                     <p class="p-text">Tip Amount</p>
+                     <p class="text-person">/ person</p>
+                  </div>
+                  <p class="price" id="tip-amount">$0.00</p>
+               </div>
+               <div class="r-wrapper">
+                  <div class="text-wrapper">
+                     <p class="p-text">Total</p>
+                     <p class="text-person">/ person</p>
+                  </div>
+                  <p class="price" id="total-amount">$0.00</p>
+               </div>
+            </div>
+            <button id="reset-btn" class="reset-btn disabled">reset</button>
+         </section>
+      </div>
+   </main>
+   <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/adrn-en">Adrian Navarro</a>.
+   </footer>
+</body>
+
+</html>
